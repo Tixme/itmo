@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Maps Google</title>
+    <style>
+      #map-canvas {
+	height: 600px;
+	width: 1300px;
+	margin: 10px;
+	padding: 5px;
+	border: 7px black double;
+}	
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script>
+
+function initialize() {
+	var myLatlng = new google.maps.LatLng(-25.363882, 131.044922);
+	 var myLatlng2 = new google.maps.LatLng(-26.473882, 135.164922);
+	 
+  var mapOptions = {
+    zoom: 4,
+    center: myLatlng
+  };
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+
+  var marker = new google.maps.Marker({
+    position: map.getCenter(),
+  });
+  var contentString = 'Cформировавшаяся около 680 миллионов лет назад в Австралии массивная оранжево-коричневая скала овальной формы. Расположена в «регионе» Центральная Австралия (en.) — самом южном административном районе Северной Территории в центре континента в 450 км к юго-западу от города Алис-Спрингс. В 18 км севернее от Улуру находится курортный городок Юлара (en.) с зоной отдыха и обслуживания туристов, на границе которого построен аэропорт Эрс-Рок.';
+	 var contentString2 = 'просто точка =)' ;
+	 createMarker(myLatlng, contentString, 'Uluru (Ayers Rock)' );
+createMarker(myLatlng2, contentString2, 'Place second' );
+function createMarker(myLatlng, contentString, mytitle) {
+	 var marker = new google.maps.Marker({
+	 	 position : myLatlng,
+	 	 map : map,
+	 	 title : mytitle
+	 });
+	 var infowindow = new google.maps.InfoWindow({
+	 	 content : contentString
+	 });
+	 google.maps.event.addListener(marker, 'click' , function() {
+	 	 infowindow.open(map, marker);
+	 });
+}
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>

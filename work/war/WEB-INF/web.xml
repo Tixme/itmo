@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Work</servlet-name>
+		<servlet-class>work.com.WorkServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Work</servlet-name>
+		<url-pattern>/work</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Zadanie1</servlet-name>
+		<servlet-class>work.com.Zadanie1Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Zadanie1</servlet-name>
+		<url-pattern>/Zadanie1</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Zadani1</servlet-name>
+		<servlet-class>work.com.Zadani1Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Zadani1</servlet-name>
+		<url-pattern>/Zadani1</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Zadan1</servlet-name>
+		<servlet-class>work.com.Zadan1Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Zadan1</servlet-name>
+		<url-pattern>/Zadan1</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Zada1</servlet-name>
+		<servlet-class>work.com.Zada1Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Zada1</servlet-name>
+		<url-pattern>/Zada1</url-pattern>
+	</servlet-mapping>
+	
+	
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
